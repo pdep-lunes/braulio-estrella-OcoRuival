@@ -7,8 +7,7 @@ module Main () where
         cantidadDeVida :: Int
         }
 
-esPoder :: Personaje -> Personaje
-esPoder unPersonaje = unPersonaje
+esPoder :: 
 
 bolaEspinosa :: Personaje -> Personaje
 bolaEspinosa (_ , _ , _ , _ , vida)
