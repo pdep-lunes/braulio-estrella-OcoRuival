@@ -1,20 +1,28 @@
 module Main () where
 
-    type Personaje=(String, String, String, Bool, Int)
+    data Personaje= unPersonaje{
+        nombre :: String
+        poderBasico :: String
+        superPoderActivo :: Bool
+        cantidadDeVida :: Int
+        }
 
-
+esPoder :: Personaje -> Personaje
+esPoder unPersonaje = unPersonaje
 
 bolaEspinosa :: Personaje -> Personaje
- bolaEspinosa (_ , _ , _ , _ , vida)
+bolaEspinosa (_ , _ , _ , _ , vida)
     |    vida >1000 = vida -1000
     |  otherwise = vida - vida
 
-esAliado :: Personaje -> Bool
-esAliado unPersonaje = True
 
-lluviaDeTuercas :: personaje -> personaje
+lluviaDeTuercas :: Personaje -> Personaje
 lluviaDeTuercas (_ , _ , _ , _ , vida)
-  | esAliado unPersonaje = vida + 800
-  | not.esAliado unPersonaje = div vida 2
+  | unPersonaje = vida + 800
+  | unPersonaje = div vida 2
   | otherwise unPersonaje = unPersonaje
+ 
 
+granadaDeEspinas :: Personaje -> Int -> Personaje
+granadaDeEspinas (nombre , _ , _ , superActiva , vida) radioDeExplosion 
+  | radioDeExplosion > 3 = (nombre )
